@@ -1067,7 +1067,8 @@ keybind: Keybinds = .{},
 @"window-theme": WindowTheme = .auto,
 
 /// The colorspace to use for the terminal window. The default is `srgb` but
-/// this can also be set to `display-p3` to use the Display P3 colorspace.
+/// this can also be set to `display-p3` to use the Display P3 colorspace or
+/// `generic-rgb` to use the Calibrated RGB colorspace.
 ///
 /// Changing this value at runtime will only affect new windows.
 ///
