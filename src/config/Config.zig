@@ -5291,6 +5291,7 @@ pub const WindowTheme = enum {
 pub const WindowColorspace = enum {
     srgb,
     @"display-p3",
+    @"generic-rgb",
 };
 
 /// See macos-titlebar-style

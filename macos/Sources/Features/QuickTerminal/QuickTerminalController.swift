@@ -322,6 +322,8 @@ class QuickTerminalController: BaseTerminalController {
         switch (self.derivedConfig.windowColorspace) {
         case "display-p3":
             window.colorSpace = .displayP3
+        case "generic-rgb":
+            window.colorSpace = .genericRGB
         case "srgb":
             fallthrough
         default:

@@ -301,6 +301,8 @@ class TerminalController: BaseTerminalController {
         switch (config.windowColorspace) {
         case "display-p3":
             window.colorSpace = .displayP3
+        case "generic-rgb":
+            window.colorSpace = .genericRGB
         case "srgb":
             fallthrough
         default:
