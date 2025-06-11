@@ -23,6 +23,12 @@ pub fn build(b: *std.Build) !void {
     defer flags.deinit();
     try flags.appendSlice(&.{});
 
+    // Add flag to include our compatibility header on macOS
+    if (target.result.isDarwin()) {
+        try flags.append("-include");
+        try flags.append(b.path("vendor/mach_vm_compat.h").getPath(b));
+    }
+
     lib.addCSourceFiles(.{
         .root = upstream.path(""),
         .files = common,
