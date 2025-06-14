@@ -2707,7 +2707,7 @@ fn rebuildCells(
                     // If we don't have invert selection fg/bg set
                     // then we just use the selection foreground if
                     // set, otherwise the default bg color.
-                    break :fg self.config.selection_foreground orelse self.background_color orelse self.default_background_color;
+                    break :fg self.config.selection_foreground orelse fg_style;
                 }
 
                 // Whether we need to use the bg color as our fg color:
